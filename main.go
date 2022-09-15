@@ -7,9 +7,9 @@ import (
 
 func main() {
 	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
+	r.GET("/sink", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
-			"message": "pong",
+			"status": "received",
 		})
 	})
 	r.Run()
